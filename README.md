@@ -9,5 +9,5 @@ It also analyses all the layers of the document and shows numbers of unnamed, du
 ### Usage
 *yet to add. its quite intuitive though*
 
-### <a href="https://github.com/kirillperesh/AI_scripts/raw/base/CatesLayerKit.jsx">Download</a>
-Right click -> Save link as (for Chrome)
+### Download
+#### from <a href="https://drive.google.com/file/d/1A-jHWSDceCeTifajtkybNHvm8wb89V0l/view?usp=sharing">Google Drive</a> or <a href="https://github.com/kirillperesh/AI_scripts/raw/base/CatesLayerKit.jsx">GitHub </a> *(Right click -> Save link as for Chrome)*
