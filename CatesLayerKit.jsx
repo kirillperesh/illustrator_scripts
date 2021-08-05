@@ -19,12 +19,17 @@
 
   Released under the MIT license.
   http://opensource.org/licenses/mit-license.php
+
+
+  UPDATES
+    v.1.0.1
+    - fixed a bug that made AI crash if trying to select blocked layers (via 'Select unnamed' or 'Select dublicates' buttons)
 */
 
 //@target illustrator
 
 var _NAME = "Cate's Layer Kit",
-    _VERSION = 'v.1.0';
+    _VERSION = 'v.1.0.1';
 
 function main() {
   if (documents.length == 0)
