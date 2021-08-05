@@ -19,12 +19,17 @@
 
   Released under the MIT license.
   http://opensource.org/licenses/mit-license.php
+
+
+  UPDATES
+    v.1.0.1
+    - fixed a bug that made AI crash if trying to select blocked layers (via 'Select unnamed' or 'Select dublicates' buttons)
 */
 
 //@target illustrator
 
 var _NAME = "Cate's Layer Kit",
-    _VERSION = 'v.1.0';
+    _VERSION = 'v.1.0.1';
 
 function main() {
   if (documents.length == 0)
@@ -364,7 +369,12 @@ function main() {
           _pageItems[i].selected = false;
           for (var j = 0; j < _unnamedLayers.length; j++)
             {
-              if (_unnamedLayers[j] == _pageItems[i].layer) {_pageItems[i].selected = true;}
+              if (_unnamedLayers[j] == _pageItems[i].layer) {
+                try {
+                  _pageItems[i].selected = true;
+                    }
+                catch(err){alert('Unable to select ' + _pageItems[i].layer.name + ".\nProbable because it's blocked..")}
+              }
             }
         }
     }
@@ -373,7 +383,10 @@ function main() {
       deselectPageItems();
       for (var i = 0; i < _duplicateLayersItems.length; i++)
         {
-          _duplicateLayersItems[i].selected = true;
+          try {
+            _duplicateLayersItems[i].selected = true;
+              }
+          catch(err){alert('Unable to select ' + _duplicateLayersItems[i].layer.name + ".\nProbable because it's blocked..")}
         }
     }
 
